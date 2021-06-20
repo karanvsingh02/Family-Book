@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Family Book</title>
+    <link rel="stylesheet" type="style/css" href="style.css">
+  </head>
+  <body style="background-color: cornflowerblue;">
+    <center>
+
+
+      <h1 id="firstp">Family Members Book</h1>
+
+    <img id="album" style="height:500px; width:400px; border-radius: 20px;" src="9.jpg">
+    <br><br><br>
+         
+    <div>
+           <button type="button" onclick="nextslide()">Next</button>
+    </div>
+
+    <h3 id="Family_member_name">Harvinder Singh</h3>
+
+
+
+    <script>
+        var names=[
+  "Harvinder Singh","Amarpreet Kaur","Avraj Singh","Karanveer Singh"
+];
+
+
+var images=[
+  "9.jpg","8.jpg","11.jpg","5.jpg"
+];
+
+
+var i=0;
+function nextslide()
+{
+
+  i++;
+  var numbers_of_family_members_in_array= 3;
+  if(i>numbers_of_family_members_in_array )
+   {
+      i= 0
+   }
+var updated_image= images[i];
+var updatd_name= names[i];
+
+  document.getElementById("Family_member_name").innerHTML=names[i];
+  document.getElementById("album").src=images[i];
+}
+    </script>
+
+
+
+
+
+    </center>
+    
+  </body>
+
+</html>
